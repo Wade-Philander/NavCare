@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="App123.Views.SignUp"
+             BackgroundImage="signup2">
+    
+   
+        <ScrollView>
+            
+            <StackLayout>
+                <Button Text=" Sign Up" TextColor="Black" CornerRadius="10" BackgroundColor="Gold"
+                    Scale="1.4"
+                   VerticalOptions="CenterAndExpand"
+                  
+                    FontSize="Large"/>
+                
+                <Label Text="Name" TextColor="Gold"
+               FontSize="Large"
+                HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+                
+                <Entry Text="{Binding LatestUser.Name}" TextColor="Gold" FontSize="Medium"  />
+                
+                <Label Text="Surname" TextColor="Gold"
+               FontSize="Large"
+                HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+                
+                <Entry Text="{Binding LatestUser.Surname}" TextColor="Gold" FontSize="Medium"  />
+                
+                <Label Text="ID" TextColor="Gold"
+               FontSize="Large"
+                HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+                
+                <Entry Text="{Binding LatestUser.ID}" TextColor="Gold" FontSize="Medium"  />
+                
+                <Label Text="Email" TextColor="Gold"
+               FontSize="Large"
+                HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+                
+                <Entry Text="{Binding LatestUser.Email}" TextColor="Gold" FontSize="Medium"  />
+                
+                <Label Text="Contact Number" TextColor="Gold"
+               FontSize="Large"
+                HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+                
+                <Entry Text="{Binding LatestUser.ContactNumber}" TextColor="Gold" FontSize="Medium"  />
+                
+                <Label Text="Password" TextColor="Gold"
+               FontSize="Large"
+                HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+                
+                <Entry Text="{Binding LatestUser.Password}" TextColor="Gold" FontSize="Medium"  />
+                
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    
+                    </Grid.ColumnDefinitions>
+                <Button Text="Save Details" Command="{Binding SaveCommand}" Grid.Column="0" CornerRadius="21" TextColor="Black" BackgroundColor="Gold"/>
+                <Button Text="Cancel" Command="{Binding MainPage}"  Grid.Column="1" CornerRadius="21" TextColor="Black" BackgroundColor="Gold"/>
+                </Grid>
+
+
+ </StackLayout>
+  </ScrollView>
+    </ContentPage>
